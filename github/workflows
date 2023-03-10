@@ -1,0 +1,16 @@
+name: Backup RDS
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+inputs:
+  db-instance-identifier:
+    description: 'The DB instance identifier of the RDS instance to backup.'
+    required: true
+  region:
+    description: 'The AWS region where the RDS instance is located.'
+    required: true
+  s3-bucket:
+    description: 'The name of the S3 bucket where the backup will be stored.'
+    required: true 
